@@ -1,0 +1,24 @@
+{
+  "name": "@iso/web",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-native-web": "^0.14.8"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "babel-plugin-react-native-web": "^0.14.8",
+    "next-transpile-modules": "^4.1.0",
+    "typescript": "4.0"
+  }
+}
