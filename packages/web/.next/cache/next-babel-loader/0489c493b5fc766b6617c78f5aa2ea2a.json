@@ -1,1 +1,0 @@
-{"ast":null,"code":"export * from './Text';\nexport * from './detectPlatform';","map":{"version":3,"sources":["/mnt/f/Main/sites/isomorphic/packages/shared/src/index.ts"],"names":[],"mappings":"AAAA,cAAc,QAAd;AACA,cAAc,kBAAd","sourcesContent":["export * from './Text';\nexport * from './detectPlatform';\n"]},"metadata":{},"sourceType":"module"}
