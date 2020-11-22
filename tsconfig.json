@@ -5,7 +5,7 @@
     "sourceMap": true,
     "baseUrl": "./",
     "paths": {
-      "@iso/*": ["packages/*/src"]
+      "@iso/*": ["packages/*/dist"]
     },
     "jsx": "react",
     "esModuleInterop": true,
