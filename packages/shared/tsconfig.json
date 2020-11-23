@@ -4,9 +4,9 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "outDir": "./dist",
-    "declaration": true,
-    "allowJs": true
+    "types": [
+      "./src/types"
+    ]
   },
   "include": ["./src"]
 }
