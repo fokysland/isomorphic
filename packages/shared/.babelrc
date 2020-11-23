@@ -1,6 +1,0 @@
-{
-  "presets": [
-    "@babel/react", "@babel/typescript", "@babel/env"
-  ],
-  "plugins": ["react-native-web"]
-}
