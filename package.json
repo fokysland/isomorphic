@@ -5,7 +5,8 @@
     "packages/*"
   ],
   "scripts": {
-    "lerna": "lerna"
+    "dev:web": "lerna run dev --scope @iso/web",
+    "build:web": "lerna run build --scope @iso/web"
   },
   "devDependencies": {
     "lerna": "^3.22.1",
