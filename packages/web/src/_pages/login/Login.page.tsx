@@ -49,6 +49,7 @@ export const Login = (): JSX.Element => {
         />
         <TextInput
           placeholder="Enter password..."
+          isPassword
           value={password}
           onChange={setPassword}
         />

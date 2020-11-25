@@ -5,5 +5,6 @@ export type TextInputProps = {
   onChange: (v: string) => void;
   placeholder: string;
   multiline?: boolean;
+  isPassword?: boolean;
   style?: StyleProp<ViewStyle>;
 };
