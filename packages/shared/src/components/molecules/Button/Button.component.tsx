@@ -6,9 +6,9 @@ import { Container } from './Button.styles';
 import { ButtonProps } from './Button.interface';
 
 export const Button = ({
-  backgroundColor,
+  backgroundColor = 'main',
   text,
-  textColor,
+  textColor = 'text',
   style,
   onClick,
 }: ButtonProps): JSX.Element => {
@@ -18,6 +18,7 @@ export const Button = ({
       color={backgroundColor}
       style={style}
       activeOpacity={0.6}
+      accessibilityRole='button'
     >
       <Text bold={900} text={text} color={textColor} />
     </Container>

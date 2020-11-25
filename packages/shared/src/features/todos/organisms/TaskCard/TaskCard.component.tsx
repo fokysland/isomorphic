@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { View } from 'react-native';
+
 import { Button, Text } from '@iso/shared';
 
 import { Container } from './TaskCard.styles';
@@ -10,7 +12,7 @@ export const TaskCard = ({
   id,
   onDone,
   style,
-  title,
+  title
 }: TaskCardProps): JSX.Element => {
   const handleDone = () => {
     onDone(id);
@@ -18,13 +20,15 @@ export const TaskCard = ({
 
   return (
     <Container style={style}>
-      <Text text={title} size="large" bold={700} />
-      <Text
-        text={date.toLocaleDateString()}
-        bold={700}
-        color="text_gray"
-        style={{ marginBottom: 25, marginTop: 5 }}
-      />
+      <View style={{ marginBottom: 25 }}>
+        <Text text={title} size="large" bold={700} />
+        <Text
+          text={date.toLocaleDateString()}
+          bold={700}
+          color="text_gray"
+          style={{ marginTop: 5 }}
+        />
+      </View>
 
       <Button
         onClick={handleDone}

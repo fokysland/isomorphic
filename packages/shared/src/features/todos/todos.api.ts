@@ -7,5 +7,6 @@ type GetTodosResponse = {
 
 export const getTodos = async (): Promise<GetTodosResponse> => {
   const response = await fetch('https://jsonplaceholder.typicode.com/todos');
-  return response.json();
+  const json = (await response.json()) as GetTodosResponse;
+  return json.slice(0, 20);
 };

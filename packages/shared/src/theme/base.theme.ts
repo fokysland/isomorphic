@@ -5,6 +5,7 @@ export const baseTheme = {
   },
   colors: {
     white: '#ffffff',
+    black: '#000000',
     transparent: 'transparent',
   },
   base_space: 15

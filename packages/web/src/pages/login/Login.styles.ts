@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  
   ${media(Sizes.MOBILE)} {
     grid-template-columns: 1fr;
   }
@@ -28,9 +28,15 @@ export const DoMore = styled.img.attrs({
 export const Content = styled.main`
   display: flex;
   flex-direction: column;
-  padding-top: 140px;
   
   margin: 0 auto;
   
   max-width: 50%;
+  
+  padding-top: 80px;
+
+  ${media(Sizes.MOBILE)} {
+    padding: 65px 34px 0;
+    max-width: none;
+  }
 `;

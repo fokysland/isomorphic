@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 
-import { Text, TextInput, Button } from '@iso/shared';
+import { useRouter } from 'next/router';
+
+import { Text, TextInput, Button, login } from '@iso/shared';
 
 import { Container, Content, DoMore } from './Login.styles';
 
 export const Login = (): JSX.Element => {
-  const [value, setValue] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const router = useRouter();
+
+  const handleLogin = () => {
+    if (email.trim() !== '' && password.trim() !== '') {
+      login(email.trim());
+      router.push('/tasks').then();
+    }
+  };
 
   return (
     <Container>
@@ -25,8 +37,8 @@ export const Login = (): JSX.Element => {
         />
         <TextInput
           placeholder="Enter email..."
-          value={value}
-          onChange={setValue}
+          value={email}
+          onChange={setEmail}
         />
 
         <Text
@@ -37,17 +49,12 @@ export const Login = (): JSX.Element => {
         />
         <TextInput
           placeholder="Enter password..."
-          value={value}
-          onChange={setValue}
+          value={password}
+          onChange={setPassword}
         />
 
-        <Button
-          style={{ marginTop: 120 }}
-          text="Login"
-          backgroundColor="main"
-        />
+        <Button style={{ marginTop: 120 }} text="Login" onClick={handleLogin} />
       </Content>
-
       <DoMore />
     </Container>
   );

@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 export const Container = styled.View`
   width: 100%;
@@ -6,8 +6,8 @@ export const Container = styled.View`
   box-shadow: ${({ theme }) => theme.shadows.main};
 `;
 
-export const Input = styled.TextInput`
-  height: 60px;
+export const Input = styled.TextInput<{ multiline: boolean }>`
+  height: ${({ multiline }) => multiline ? 120 : 60}px;
   border: 0;
   
   outline-width: 0;
@@ -17,4 +17,5 @@ export const Input = styled.TextInput`
   font-weight: 700;
   
   padding-left: 20px;
+  ${({ multiline }) => multiline ? css`padding-top: 20px` : ''};
 `;
