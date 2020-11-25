@@ -32,4 +32,10 @@ export const UpperContainer = styled.div`
     left: calc(100% + 80px);
     transform: translateY(-10%);
   }
+  
+  ${media(Sizes.MOBILE)} {
+    > button:first-of-type {
+      display: none;
+    }
+  }
 `;
