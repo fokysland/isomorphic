@@ -27,8 +27,6 @@ export const TextInput = ({
       } as const)
     : ({} as const);
 
-  console.log(props);
-
   return (
     <Container style={style}>
       <Input
