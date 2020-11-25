@@ -5,7 +5,7 @@ import { useTheme } from 'styled-components/native';
 import { Container, Input } from './TextInput.styles';
 import { TextInputProps } from './TextInput.interface';
 
-export const TextInput = ({ value, onChange, placeholder, style, multiline }: TextInputProps): JSX.Element => {
+export const TextInput = ({ value, onChange, placeholder, style, multiline = false }: TextInputProps): JSX.Element => {
   const theme = useTheme();
 
   return (
